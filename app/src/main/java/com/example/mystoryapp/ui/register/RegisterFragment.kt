@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.mystoryapp.constants.Constants
 import com.example.mystoryapp.databinding.FragmentRegisterBinding
 import com.example.mystoryapp.tools.Matcher
 
@@ -50,7 +49,7 @@ class RegisterFragment : Fragment() {
                     or email.isEmpty()
                     or !Matcher.emailValid(email)
                     or password.isEmpty()
-                    or (password.length < Constants.USER_DATA_MIN_PASSWORD_LENGTH)
+                    or (password.length < 6)
                 ){
                     Toast.makeText(requireContext(), "Please check your data", Toast.LENGTH_SHORT).show()
                 }else{

@@ -15,11 +15,10 @@ class StoryAdapter(private val storyList: ArrayList<ListStoryItem>): RecyclerVie
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val data = storyList[position]
-        holder.binding.rvItemRowName.text = data.name
+        holder.binding.rvItemRowName.text = storyList[position].name
 
         Glide.with(holder.binding.root.context)
-            .load(data.photoUrl)
+            .load(storyList[position].photoUrl)
             .into(holder.binding.rvItemRowImgBanner)
 
         holder.itemView.setOnClickListener{onItemClickCallback.onItemClicked(storyList[holder.adapterPosition])}

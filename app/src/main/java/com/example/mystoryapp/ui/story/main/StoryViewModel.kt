@@ -11,21 +11,15 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class StoryViewModel : ViewModel() {
-    private lateinit var user: User
-
     private val _allStoryResponse = MutableLiveData<AllStoryResponse>()
     val allStoryResponse: LiveData<AllStoryResponse> = _allStoryResponse
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
     
-    fun setUserData(userX: User){
-        user = userX
-    }
-
-    fun getAllStory() {
+    fun getAllStory(token: String) {
         _isLoading.value = true
-        val client = ApiConfig.getApiService(user.token.toString()).getAllStory()
+        val client = ApiConfig.getApiService(token).getAllStory()
         client.enqueue(object : Callback<AllStoryResponse> {
             override fun onResponse(
                 call: Call<AllStoryResponse>,
@@ -34,6 +28,8 @@ class StoryViewModel : ViewModel() {
                 _isLoading.value = false
                 if (response.isSuccessful) {
                     _allStoryResponse.value = response.body()
+                }else{
+                    _allStoryResponse.value = AllStoryResponse()
                 }
             }
 

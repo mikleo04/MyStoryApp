@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.mystoryapp.R
 import com.example.mystoryapp.ui.register.RegisterActivity
 import com.example.mystoryapp.ui.story.main.StoryActivity
-import com.example.mystoryapp.constants.Constants.USER_DATA_MIN_PASSWORD_LENGTH
 import com.example.mystoryapp.data.User
 import com.example.mystoryapp.databinding.ActivityMainBinding
 import com.example.mystoryapp.preferences.UserPreference
@@ -87,7 +86,7 @@ class MainActivity : AppCompatActivity() {
                     email.isEmpty()
                     or !Matcher.emailValid(email)
                     or password.isEmpty()
-                    or (password.length < USER_DATA_MIN_PASSWORD_LENGTH)
+                    or (password.length < 6)
                 ){
                     Toast.makeText(this, "Please check your data", Toast.LENGTH_SHORT).show()
                 }else{

@@ -42,6 +42,8 @@ class AddStoryViewModel : ViewModel() {
                 _isLoading.value = false
                 if (response.isSuccessful) {
                     _addNewStoryResponse.value = response.body()
+                }else{
+                    _addNewStoryResponse.value = AddNewStoryResponse()
                 }
             }
 
