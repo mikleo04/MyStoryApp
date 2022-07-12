@@ -11,28 +11,20 @@ class StoryAdapter(private val storyList: ArrayList<ListStoryItem>): RecyclerVie
     private lateinit var onItemClickCallback: OnItemClickCallback
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val binding = RvItemRowsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ListViewHolder(binding)
+        return ListViewHolder(RvItemRowsBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val data = storyList[position]
-        holder.binding.rvItemRowStory.text = data.description
         holder.binding.rvItemRowName.text = data.name
-        holder.binding.rvItemRowDateCreated.text = data.createdAt.toString().substring(0,10)
 
         Glide.with(holder.binding.root.context)
             .load(data.photoUrl)
             .into(holder.binding.rvItemRowImgBanner)
 
-        // check if night mode activated
-//        if ( holder.binding.root.resources.configuration.uiMode.and(Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES)
-//            holder.binding.root.setCardBackgroundColor(Color.TRANSPARENT)
-
         holder.itemView.setOnClickListener{onItemClickCallback.onItemClicked(storyList[holder.adapterPosition])}
     }
-
-    //    override fun getItemCount(): Int = storyList.size
+    
     override fun getItemCount(): Int = storyList.size
 
     fun notifyDatasetChangedHelper(){

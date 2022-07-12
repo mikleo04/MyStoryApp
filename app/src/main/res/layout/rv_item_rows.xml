@@ -27,18 +27,6 @@
             app:srcCompat="@drawable/ic_images_re_0kll" />
 
         <TextView
-            android:id="@+id/rv_item_row_story"
-            style="@style/text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:maxLines="2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_item_row_name"
-            tools:text="@string/lorem_ipsum" />
-
-        <TextView
             android:id="@+id/rv_item_row_name"
             style="@style/heading.heading6"
             android:layout_width="wrap_content"
@@ -48,14 +36,6 @@
             app:layout_constraintTop_toBottomOf="@+id/rv_item_row_img_banner"
             tools:text="Name" />
 
-        <TextView
-            android:id="@+id/rv_item_row_date_created"
-            style="@style/text.text6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBaseline_toBaselineOf="@+id/rv_item_row_name"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="2022-04-11" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

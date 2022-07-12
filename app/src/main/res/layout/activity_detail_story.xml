@@ -10,38 +10,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageButton
-            android:id="@+id/detail_ib_backBtn"
-            style="@style/back_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/back_to_previous_page" />
-
         <ImageView
             android:id="@+id/detail_iv_banner"
             android:layout_width="409dp"
             android:layout_height="267dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/image_of_user_story"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider2"
-            app:srcCompat="@drawable/ic_images_re_0kll"
-            android:contentDescription="@string/image_of_user_story" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_images_re_0kll" />
 
         <TextView
             android:id="@+id/detail_tv_detailStory"
             style="@style/text"
-            android:layout_marginStart="16dp"
-            android:padding="16dp"
-            android:background="@drawable/outline"
-            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:padding="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider"
-            tools:text= "@string/lorem_ipsum" />
+            app:layout_constraintTop_toBottomOf="@+id/detail_tv_user"
+            tools:text="@string/lorem_ipsum" />
 
         <TextView
             android:id="@+id/detail_tv_user"
@@ -52,73 +43,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detail_iv_banner" />
 
-        <TextView
-            android:id="@+id/detail_tv_time_created"
-            style="@style/text.text6"
-            android:layout_marginEnd="16dp"
-            android:text="@string/date_created"
-            app:layout_constraintBottom_toBottomOf="@+id/detail_tv_user"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/detail_tv_user" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_tv_user" />
-
-        <TextView
-            android:id="@+id/detail_tv_header_title"
-            style="@style/heading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/detail_ib_backBtn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/detail_ib_backBtn"
-            android:text="@string/stories"
-            tools:text="Title" />
-
-        <Button
-            android:id="@+id/detail_btn_back_to_story_list"
-            style="@style/button"
-            android:layout_marginBottom="16dp"
-            android:text="@string/back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <View
-            android:id="@+id/divider2"
-            android:layout_width="409dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="16dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_ib_backBtn" />
-
-        <ImageView
-            android:id="@+id/detail_iv_no_story"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="32dp"
-            android:contentDescription="@string/user_do_not_write_a_story"
-            android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@+id/detail_btn_back_to_story_list"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider"
-            app:srcCompat="@drawable/ic_heartbroken_cble" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

@@ -29,7 +29,11 @@ class EditText: AppCompatEditText,  View.OnTouchListener {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                errorHandler()
+                if (text.isNullOrEmpty() || text?.isEmpty() == true){
+                    (this@EditText.parent.parent as TextInputLayout).error = context.getString(R.string.cannot_be_empty)
+                }else{
+                    (this@EditText.parent.parent as TextInputLayout).error = null
+                }
             }
 
             override fun afterTextChanged(p0: Editable?) {
@@ -40,26 +44,12 @@ class EditText: AppCompatEditText,  View.OnTouchListener {
     }
 
     override fun onTouch(p0: View?, event: MotionEvent?): Boolean {
-        errorHandler()
-        return false
-    }
-
-    private fun errorHandler(){
         if (text.isNullOrEmpty() || text?.isEmpty() == true){
-            showError()
+            (this@EditText.parent.parent as TextInputLayout).error = context.getString(R.string.cannot_be_empty)
         }else{
-            hideError()
+            (this@EditText.parent.parent as TextInputLayout).error = null
         }
-    }
-
-    private fun showError(){
-        val textInputLayout = this.parent.parent as TextInputLayout
-        textInputLayout.error = context.getString(R.string.cannot_be_empty)
-    }
-
-    private fun hideError(){
-        val textInputLayout = this.parent.parent as TextInputLayout
-        textInputLayout.error = null
+        return false
     }
 
 }

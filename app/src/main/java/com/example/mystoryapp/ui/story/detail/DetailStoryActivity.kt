@@ -22,16 +22,8 @@ class DetailStoryActivity : AppCompatActivity() {
         val storyText = data?.description.toString()
 
         binding.detailTvUser.text = data?.name.toString()
-        binding.detailTvTimeCreated.text = data?.createdAt.toString()
-
-        if (storyText.isEmpty()){
-            binding.detailIvNoStory.visibility = View.VISIBLE
-        }else{
-            binding.detailIvNoStory.visibility = View.GONE
-            binding.detailTvDetailStory.text = storyText
-        }
-        binding.detailIbBackBtn.setOnClickListener { finish() }
-        binding.detailBtnBackToStoryList.setOnClickListener{ finish() }
+        
+        binding.detailTvDetailStory.text = storyText
 
         Glide.with(binding.root.context)
             .load(data?.photoUrl)

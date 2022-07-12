@@ -31,7 +31,6 @@ class StoryViewModel : ViewModel() {
 
     fun getAllStory() {
         _isLoading.value = true
-        Log.d(TAG, "addNewStory: USER TOKEN: ${user.token.toString()}")
         val client = ApiConfig.getApiService2(user.token.toString()).getAllStory()
         client.enqueue(object : Callback<AllStoryResponse> {
             override fun onResponse(
@@ -41,14 +40,11 @@ class StoryViewModel : ViewModel() {
                 _isLoading.value = false
                 if (response.isSuccessful) {
                     _allStoryResponse.value = response.body()
-                } else {
-                    Log.e(ContentValues.TAG, "onFailure: ${response.message()}")
                 }
             }
 
             override fun onFailure(call: Call<AllStoryResponse>, t: Throwable) {
                 _isLoading.value = false
-                Log.e(ContentValues.TAG, "onFailure: ${t.message.toString()}")
             }
         })
     }
