@@ -2,7 +2,6 @@ package com.example.mystoryapp.ui.story.detail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.bumptech.glide.Glide
 import com.example.mystoryapp.api.response.ListStoryItem
 import com.example.mystoryapp.databinding.ActivityDetailStoryBinding

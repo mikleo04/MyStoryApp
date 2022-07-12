@@ -7,9 +7,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mystoryapp.api.ApiConfig
 import com.example.mystoryapp.api.response.AddNewStoryResponse
-import com.example.mystoryapp.api.response.LoginResponse
-import com.example.mystoryapp.data.User
-import com.google.gson.Gson
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -26,10 +23,6 @@ class AddStoryViewModel : ViewModel() {
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
-
-    companion object{
-        private const val TAG = "AddStoryModel"
-    }
     
     fun addNewStory(description: String, lat: Double, lng: Double, photo: File, token: String) {
         _isLoading.value = true

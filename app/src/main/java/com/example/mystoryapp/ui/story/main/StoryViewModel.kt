@@ -1,7 +1,5 @@
 package com.example.mystoryapp.ui.story.main
 
-import android.content.ContentValues
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,11 +18,7 @@ class StoryViewModel : ViewModel() {
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
-
-    companion object{
-        private const val TAG = "StoryModel"
-    }
-
+    
     fun setUserData(userX: User){
         user = userX
     }

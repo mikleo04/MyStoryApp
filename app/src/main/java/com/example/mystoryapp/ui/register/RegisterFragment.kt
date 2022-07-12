@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.mystoryapp.R
 import com.example.mystoryapp.constants.Constants
 import com.example.mystoryapp.databinding.FragmentRegisterBinding
 import com.example.mystoryapp.tools.Matcher

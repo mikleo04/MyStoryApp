@@ -3,9 +3,6 @@ package com.example.mystoryapp.ui.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -20,14 +17,12 @@ import com.example.mystoryapp.preferences.UserPreference
 import com.example.mystoryapp.tools.Matcher
 
 class MainActivity : AppCompatActivity() {
-    private var doubleTabToExit = false
     private lateinit var binding: ActivityMainBinding
     private lateinit var userPreference: UserPreference
     private lateinit var loginViewModelModel: LoginViewModel
     companion object{
         const val USER_EXTRA = "user_extra_data_after_create_account"
         const val USER_EXTRA_CODE = 1
-        private const val TAG = "MainActivity"
     }
 
     private val resultLauncher = registerForActivityResult( ActivityResultContracts.StartActivityForResult()) { result ->
