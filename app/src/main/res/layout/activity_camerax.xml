@@ -18,27 +18,28 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
+        android:id="@+id/camera_ic_switch_camera_mode"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/switch_camera_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_cameraswitch_24"
+        app:tint="#f4f4f4" />
+
+    <ImageView
         android:id="@+id/camera_iv_capture"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/take_picture"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_photo_camera_24"
-        app:tint="#0af" />
+        app:tint="#f4f4f4" />
 
-    <ImageView
-        android:id="@+id/camera_ic_switch_camera_mode"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:contentDescription="@string/switch_camera_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_cameraswitch_24"
-        app:tint="#0af" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

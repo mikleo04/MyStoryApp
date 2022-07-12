@@ -10,18 +10,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/add_story_iv_preview"
-            android:layout_width="361dp"
-            android:layout_height="244dp"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="41dp"
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/heading.heading6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Add Your Story Here !"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_images_re_0kll"
-            android:contentDescription="@string/preview_of_selected_image" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/add_story_iv_preview"
+            android:layout_width="350dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/preview_of_selected_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:srcCompat="@drawable/images" />
 
         <Button
             android:id="@+id/add_story_btn_camera"
@@ -47,28 +56,17 @@
             app:layout_constraintStart_toEndOf="@+id/add_story_btn_camera"
             app:layout_constraintTop_toTopOf="@+id/add_story_btn_camera" />
 
-        <Button
-            android:id="@+id/add_story_btn_upload"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="@string/upload"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/add_story_til_notes"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="200dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
             android:hint="@string/notes"
 
-            app:layout_constraintBottom_toTopOf="@+id/add_story_btn_upload"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/add_story_btn_gallery">
@@ -78,14 +76,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:height="0dp"
+                android:autofillHints="name"
                 android:ellipsize="end"
                 android:gravity="top"
                 android:hint="@string/tell_your_story_here"
                 android:inputType="textMultiLine"
-                android:text="@string/lorem_ipsum"
-                android:autofillHints="name" />
+                android:text="@string/lorem_ipsum" />
         </com.google.android.material.textfield.TextInputLayout>
-        
+
+        <Button
+            android:id="@+id/add_story_btn_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/upload"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_story_til_notes" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

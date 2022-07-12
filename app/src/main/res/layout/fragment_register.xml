@@ -6,20 +6,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.register.RegisterFragment">
 
+    <ImageView
+        android:id="@+id/register_iv_banner"
+        android:layout_width="0dp"
+        android:layout_height="197dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Register Banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/register_page" />
+
     <TextView
         android:id="@+id/textView"
         style="@style/heading"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="50dp"
         android:text="@string/create_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/register_iv_banner" />
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/register_til_name"
         style="@style/text_input_layout"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,8 +41,8 @@
 
         <com.example.mystoryapp.customview.EditText
             android:id="@+id/register_et_name"
-            android:hint="@string/name"
-            style="@style/input"/>
+            style="@style/input"
+            android:hint="@string/name" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -64,7 +77,10 @@
     <Button
         android:id="@+id/register_btn_register"
         style="@style/button"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,21 +89,21 @@
     <ProgressBar
         android:id="@+id/register_pb_progressBar"
         style= "@style/progress_bar.inline"
-        app:layout_constraintBottom_toBottomOf="@+id/register_btn_register"
-        app:layout_constraintStart_toEndOf="@+id/register_btn_register"
-        app:layout_constraintTop_toTopOf="@+id/register_btn_register" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_btn_register" />
 
 
     <TextView
         android:id="@+id/register_tv_already_have_account"
         style="@style/text"
         android:layout_width="181dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="8dp"
         android:text="@string/already_have_an_account"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_btn_register" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

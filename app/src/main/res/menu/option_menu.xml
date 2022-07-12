@@ -11,7 +11,7 @@
     <item android:title="@string/log_out"
         android:id="@+id/option_menu_log_out"
         android:icon="@drawable/ic_baseline_logout"
-        app:showAsAction="withText"/>
+        app:showAsAction="always"/>
     </group>
 
 </menu>
