@@ -8,30 +8,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfig {
     companion object{
-//        fun getApiService(): ApiService{
-//            val loggingInterceptor = if(BuildConfig.DEBUG){
-//                HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-//            }else{
-//                HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-//            }
-//
-//            val client = OkHttpClient.Builder().addInterceptor(loggingInterceptor).build()
-//            val retrofit = Retrofit.Builder()
-//                .baseUrl("https://story-api.dicoding.dev/")
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .client(client)
-//                .build()
-//            return retrofit.create(ApiService::class.java)
-//        }
-        fun getApiService2(authenticationStr: String = ""): ApiService{
-            val loggingInterceptor = if(BuildConfig.DEBUG){
-                HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-            }else{
-                HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-            }
-
-            val client = OkHttpClient.Builder().addInterceptor(loggingInterceptor).addInterceptor { chain ->
-                chain.proceed(request = chain.request().newBuilder().addHeader("Authorization", "Bearer $authenticationStr").build() )
+        fun getApiService(auth: String = ""): ApiService{
+            val client = OkHttpClient.Builder().addInterceptor(
+                if(BuildConfig.DEBUG){
+                    HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+                }else{
+                    HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+                }
+            ).addInterceptor { chain ->
+                chain.proceed(request = chain.request().newBuilder().addHeader("Authorization", "Bearer $auth").build() )
             }.build()
             val retrofit = Retrofit.Builder()
                 .baseUrl("https://story-api.dicoding.dev/")

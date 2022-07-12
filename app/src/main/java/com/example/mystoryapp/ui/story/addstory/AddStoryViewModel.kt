@@ -26,7 +26,7 @@ class AddStoryViewModel : ViewModel() {
     
     fun addNewStory(description: String, lat: Double, lng: Double, photo: File, token: String) {
         _isLoading.value = true
-        val client = ApiConfig.getApiService2(token).addNewStory(
+        val client = ApiConfig.getApiService(token).addNewStory(
             description.toRequestBody("text/plain".toMediaType()),
             lat,
             lng,

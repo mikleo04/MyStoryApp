@@ -25,7 +25,7 @@ class StoryViewModel : ViewModel() {
 
     fun getAllStory() {
         _isLoading.value = true
-        val client = ApiConfig.getApiService2(user.token.toString()).getAllStory()
+        val client = ApiConfig.getApiService(user.token.toString()).getAllStory()
         client.enqueue(object : Callback<AllStoryResponse> {
             override fun onResponse(
                 call: Call<AllStoryResponse>,
