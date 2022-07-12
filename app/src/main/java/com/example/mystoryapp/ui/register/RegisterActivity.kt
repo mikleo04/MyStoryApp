@@ -14,10 +14,7 @@ class RegisterActivity : AppCompatActivity() {
         supportActionBar?.title = getString(R.string.register)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
-
-        /**
-        Immediately Start RegisterFragment
-         */
+        
         val mFragmentManager = supportFragmentManager
         val mRegisterFragment = RegisterFragment()
         val fragment = mFragmentManager.findFragmentByTag(RegisterFragment::class.java.simpleName)

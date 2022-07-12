@@ -10,7 +10,6 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
-import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
@@ -28,14 +27,11 @@ class AddStoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddStoryBinding
     private lateinit var addStoryModel: AddStoryViewModel
     private var photoFile: File? = null
-    private lateinit var userPreference: UserPreference
     private lateinit var user: User
-    private var isExecutingUpload = false
 
     companion object{
         const val CAMERA_X_RESULT_CODE = 1
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
-        private const val REQUEST_CODE_PERMISSIONS = 10
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,45 +39,43 @@ class AddStoryActivity : AppCompatActivity() {
         setContentView(binding.root)
         addStoryModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
             AddStoryViewModel::class.java)
-
-        userPreference = UserPreference(this)
-        user = userPreference.getUser()
-
-        addStoryModel.setUserData(user)
+        
+        user = UserPreference(this).getUser()
 
         binding.addStoryBtnGallery.setOnClickListener{
-            startGallery()
+            val intent = Intent()
+            intent.action = Intent.ACTION_GET_CONTENT
+            intent.type = "image/*"
+            launcherIntentGallery.launch(Intent.createChooser(intent, "Choose a Picture"))
         }
 
         binding.addStoryBtnUpload.setOnClickListener{
-            binding.addStoryTvErrMsg.text = ""
             if (photoFile == null){
                 Toast.makeText(this, "Photo is required", Toast.LENGTH_SHORT).show()
             }else{
-                if (!isExecutingUpload){
-                    val notes = binding.addStoryEtNotes.text.toString()
-                    addStoryModel.addNewStory(notes, 0.0, 0.0, photoFile!!)
-                }
+                addStoryModel.addNewStory(binding.addStoryEtNotes.text.toString(), 0.0, 0.0, photoFile!!, user.token.toString())
+            }
+        }
+
+        addStoryModel.addNewStoryResponse.observe(this){
+            if(it.error == false){
+                finish()
+            }else{
+                Toast.makeText(this, "Add story gagal", Toast.LENGTH_SHORT).show()
+            }
+        }
+        binding.addStoryBtnCamera.setOnClickListener {
+            if (!allPermissionsGranted()) {
+                ActivityCompat.requestPermissions(
+                    this,
+                    REQUIRED_PERMISSIONS,
+                    10
+                )
+            }else{
+                launcherIntentCameraX.launch(Intent(this, CameraxActivity::class.java))
             }
 
         }
-        addStoryModel.isLoading.observe(this){
-            if (it) {
-                binding.addStoryUploadProgressBar.visibility = View.VISIBLE
-                isExecutingUpload = true
-            } else {
-                binding.addStoryUploadProgressBar.visibility = View.GONE
-                isExecutingUpload = false
-            }
-        }
-        addStoryModel.addNewStoryResponse.observe(this){
-            if(it.error == false && it.message == "Story created successfully"){
-                finish()
-            }else{
-                binding.addStoryTvErrMsg.text = it.message.toString()
-            }
-        }
-        prepareCameraX()
     }
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
         ContextCompat.checkSelfPermission(baseContext, it) == PackageManager.PERMISSION_GRANTED
@@ -105,38 +99,12 @@ class AddStoryActivity : AppCompatActivity() {
 
             binding.addStoryIvPreview.setImageBitmap(result)
         }
-
-    }
-    private fun prepareCameraX() {
-        binding.addStoryBtnCamera.setOnClickListener {
-            if (!allPermissionsGranted()) {
-                ActivityCompat.requestPermissions(
-                    this,
-                    REQUIRED_PERMISSIONS,
-                    REQUEST_CODE_PERMISSIONS
-                )
-            }else{
-                val intent = Intent(this, CameraxActivity::class.java)
-                launcherIntentCameraX.launch(intent)
-            }
-
-        }
-    }
-
-
-    private fun startGallery() {
-        val intent = Intent()
-        intent.action = Intent.ACTION_GET_CONTENT
-        intent.type = "image/*"
-        val chooser = Intent.createChooser(intent, "Choose a Picture")
-        launcherIntentGallery.launch(chooser)
     }
 
     private val launcherIntentGallery = registerForActivityResult( ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == RESULT_OK) {
             val selectedImg: Uri = result.data?.data as Uri
             photoFile = createTemporaryFile(selectedImg)
-
             binding.addStoryIvPreview.setImageURI(selectedImg)
         }
     }

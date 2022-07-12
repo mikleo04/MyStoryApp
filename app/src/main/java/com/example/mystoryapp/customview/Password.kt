@@ -29,7 +29,15 @@ class Password: AppCompatEditText,  View.OnTouchListener {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                errorHandler()
+                if (text.isNullOrEmpty()){
+                    (this@Password.parent.parent as TextInputLayout).error = context.getString(R.string.cannot_be_empty)
+                }else{
+                    if (text?.length!! < 6){
+                        (this@Password.parent.parent as TextInputLayout).error = context.getString(R.string.password_must_more_than_x_characters)
+                    }else{
+                        (this@Password.parent.parent as TextInputLayout).error = null
+                    }
+                }
             }
 
             override fun afterTextChanged(p0: Editable?) {
@@ -40,20 +48,15 @@ class Password: AppCompatEditText,  View.OnTouchListener {
     }
 
     override fun onTouch(p0: View?, event: MotionEvent?): Boolean {
-        errorHandler()
-        return false
-    }
-    private fun errorHandler(){
-        val textInputLayout = this.parent.parent as TextInputLayout
         if (text.isNullOrEmpty()){
-            textInputLayout.error = context.getString(R.string.cannot_be_empty)
+            (this@Password.parent.parent as TextInputLayout).error = context.getString(R.string.cannot_be_empty)
         }else{
             if (text?.length!! < 6){
-                textInputLayout.error = context.getString(R.string.password_must_more_than_x_characters)
+                (this@Password.parent.parent as TextInputLayout).error = context.getString(R.string.password_must_more_than_x_characters)
             }else{
-                textInputLayout.error = null
+                (this@Password.parent.parent as TextInputLayout).error = null
             }
         }
+        return false
     }
-
 }
