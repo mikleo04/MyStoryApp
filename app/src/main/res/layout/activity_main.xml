@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.MainActivity">
+
+    <ImageView
+        android:id="@+id/main_iv_banner"
+        android:layout_width="0dp"
+        android:layout_height="197dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="131dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_loving_it_re_jfh4"
+        android:contentDescription="@string/login_banner" />
+
+
+    <TextView
+        android:id="@+id/main_tv_title"
+        style="@style/heading"
+        android:layout_marginTop="36dp"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_iv_banner" />
+
+    <TextView
+        android:id="@+id/main_tv_subtitle"
+        style="@style/text"
+        android:text="@string/please_sign_in_to_continue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_tv_title" />
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/main_til_email"
+        style="@style/text_input_layout.email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_tv_subtitle"
+        app:layout_constraintHorizontal_bias="0.0">
+
+        <com.example.mystoryapp.customview.Email
+            android:id="@+id/main_et_email"
+            style="@style/input.email"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/main_til_password"
+        style="@style/text_input_layout.password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_til_email">
+
+        <com.example.mystoryapp.customview.Password
+            android:id="@+id/main_et_password"
+            style="@style/input.password"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/main_tv_do_not_have_acc"
+        style="@style/text"
+        android:layout_marginBottom="32dp"
+        android:text="@string/do_not_have_an_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/main_tv_sign_up"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_tv_err_login_failed" />
+
+    <TextView
+        android:id="@+id/main_tv_sign_up"
+        style="@style/text"
+        android:layout_marginStart="8dp"
+        android:text="@string/sign_up"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/main_tv_do_not_have_acc"
+        app:layout_constraintTop_toTopOf="@+id/main_tv_do_not_have_acc" />
+
+    <Button
+        android:id="@+id/main_btn_login"
+        style="@style/button"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_til_password" />
+
+    <ProgressBar
+        android:id="@+id/main_pb_progress_bar_login"
+        style="@style/progress_bar.inline"
+        app:layout_constraintBottom_toBottomOf="@+id/main_btn_login"
+        app:layout_constraintStart_toEndOf="@+id/main_btn_login"
+        app:layout_constraintTop_toTopOf="@+id/main_btn_login" />
+
+    <TextView
+        android:id="@+id/main_tv_err_login_failed"
+        style="@style/text.error_message"
+        android:layout_marginTop="8dp"
+        tools:text="Wrong email or password"
+        app:layout_constraintEnd_toEndOf="@+id/main_btn_login"
+        app:layout_constraintStart_toStartOf="@+id/main_btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/main_btn_login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
