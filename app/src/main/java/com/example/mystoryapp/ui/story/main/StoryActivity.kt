@@ -38,7 +38,7 @@ class StoryActivity : AppCompatActivity() {
         supportActionBar?.title = getString(R.string.app_name)
         supportActionBar?.subtitle = getString(R.string.story_note_app)
 
-        binding.storiesFabAddStory.setOnClickListener{
+        binding.fabAddstory.setOnClickListener{
             startActivity(Intent(this, AddStoryActivity::class.java))
         }
         
@@ -50,9 +50,9 @@ class StoryActivity : AppCompatActivity() {
         }
         storyModel.isLoading.observe(this){
             if (it){
-                binding.storiesProgressBar.visibility = View.VISIBLE
+                binding.pbStoryprogressbar.visibility = View.VISIBLE
             }else{
-                binding.storiesProgressBar.visibility = View.GONE
+                binding.pbStoryprogressbar.visibility = View.GONE
             }
         }
         storyModel.getAllStory(UserPreference(this).getUser().token.toString())
@@ -82,7 +82,7 @@ class StoryActivity : AppCompatActivity() {
             R.id.option_menu_refresh -> {
                 storyModel.getAllStory(UserPreference(this).getUser().token.toString())
                 listStoryAdapter.notifyDatasetChangedHelper()
-                binding.storiesProgressBar.visibility = View.VISIBLE
+                binding.pbStoryprogressbar.visibility = View.VISIBLE
             }
         }
 
@@ -97,7 +97,7 @@ class StoryActivity : AppCompatActivity() {
 
     private fun showStoryRecyclerList(){
         listStoryAdapter = StoryAdapter(storyList)
-        binding.storiesRvStoryList.layoutManager = LinearLayoutManager(this@StoryActivity)
+        binding.rvStorylist.layoutManager = LinearLayoutManager(this@StoryActivity)
 
         listStoryAdapter.setOnItemClickCallback(object : StoryAdapter.OnItemClickCallback{
             override fun onItemClicked(data: ListStoryItem) {
@@ -106,6 +106,6 @@ class StoryActivity : AppCompatActivity() {
                 startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this@StoryActivity as Activity).toBundle())
             }
         })
-        binding.storiesRvStoryList.adapter = listStoryAdapter
+        binding.rvStorylist.adapter = listStoryAdapter
     }
 }

@@ -34,16 +34,16 @@ class RegisterFragment : Fragment() {
 
         registerViewModelModel.isLoading.observe(viewLifecycleOwner) {
             if (it) {
-                binding.registerPbProgressBar.visibility = View.VISIBLE
+                binding.pbRegisterprogressbar.visibility = View.VISIBLE
             } else {
-                binding.registerPbProgressBar.visibility = View.GONE
+                binding.pbRegisterprogressbar.visibility = View.GONE
             }
         }
 
-        binding.registerBtnRegister.setOnClickListener{
-                val name = binding.registerEtName.text.toString()
-                val email = binding.registerEtEmail.text.toString()
-                val password = binding.registerEtPassword.text.toString()
+        binding.btnRegister.setOnClickListener{
+                val name = binding.etRegistername.text.toString()
+                val email = binding.etRegisteremail.text.toString()
+                val password = binding.etRegisterpassword.text.toString()
 
                 if (name.isEmpty()
                     or email.isEmpty()
@@ -56,6 +56,6 @@ class RegisterFragment : Fragment() {
                     registerViewModelModel.register(name, email, password)
                 }
         }
-        binding.registerTvAlreadyHaveAccount.setOnClickListener { activity?.onBackPressed() }
+        binding.tvHaveaccount.setOnClickListener { activity?.onBackPressed() }
     }
 }

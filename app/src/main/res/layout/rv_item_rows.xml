@@ -16,7 +16,7 @@
         android:padding="25dp">
 
         <ImageView
-            android:id="@+id/rv_item_row_img_banner"
+            android:id="@+id/rv_rowimagebanner"
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:contentDescription="@string/image_of_user_story"
@@ -27,13 +27,13 @@
             app:srcCompat="@drawable/images" />
 
         <TextView
-            android:id="@+id/rv_item_row_name"
+            android:id="@+id/rv_rowname"
             style="@style/heading.heading6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="@+id/rv_item_row_img_banner"
-            app:layout_constraintTop_toBottomOf="@+id/rv_item_row_img_banner"
+            app:layout_constraintStart_toStartOf="@+id/rv_rowimagebanner"
+            app:layout_constraintTop_toBottomOf="@+id/rv_rowimagebanner"
             tools:text="Name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

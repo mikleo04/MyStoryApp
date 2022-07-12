@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
     private val resultLauncher = registerForActivityResult( ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == USER_EXTRA_CODE && result.data != null) {
             val user = result.data!!.getParcelableExtra<User>(USER_EXTRA)
-            binding.mainEtEmail.setText(user?.email)
-            binding.mainEtPassword.setText(user?.password)
+            binding.etLoginemail.setText(user?.email)
+            binding.etLoginpassword.setText(user?.password)
         }
     }
 
@@ -52,15 +52,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.title = "Login"
         supportActionBar?.hide()
-        binding.mainTvDoNotHaveAcc.setOnClickListener {
+        binding.tvNoaccount.setOnClickListener {
             resultLauncher.launch(Intent(this@MainActivity, RegisterActivity::class.java))
         }
         
         
         //Login process
         loginViewModelModel.isLoading.observe(this){
-            if (it) binding.mainPbProgressBarLogin.visibility = View.VISIBLE
-            else binding.mainPbProgressBarLogin.visibility = View.GONE
+            if (it) binding.pbLoginprogressbar.visibility = View.VISIBLE
+            else binding.pbLoginprogressbar.visibility = View.GONE
         }
 
         loginViewModelModel.loginResponse.observe(this) {
@@ -79,9 +79,9 @@ class MainActivity : AppCompatActivity() {
 
         }
         
-        binding.mainBtnLogin.setOnClickListener{
-                val email = binding.mainEtEmail.text.toString()
-                val password = binding.mainEtPassword.text.toString()
+        binding.btnLogin.setOnClickListener{
+                val email = binding.etLoginemail.text.toString()
+                val password = binding.etLoginpassword.text.toString()
                 if (
                     email.isEmpty()
                     or !Matcher.emailValid(email)

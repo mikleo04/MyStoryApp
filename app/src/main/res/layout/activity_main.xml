@@ -7,7 +7,7 @@
     tools:context=".ui.login.MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_titlelogin"
         style="@style/heading.heading6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/main_iv_banner"
+        android:id="@+id/iv_loginbanner"
         android:layout_width="0dp"
         android:layout_height="197dp"
         android:layout_marginTop="24dp"
@@ -26,50 +26,50 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titlelogin"
         app:srcCompat="@drawable/login_page" />
 
 
     <TextView
-        android:id="@+id/main_tv_title"
+        android:id="@+id/tv_login"
         style="@style/heading"
         android:layout_marginTop="24dp"
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_iv_banner" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_loginbanner" />
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/main_til_email"
+        android:id="@+id/til_loginemail"
         style="@style/text_input_layout.email"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_tv_title">
+        app:layout_constraintTop_toBottomOf="@+id/tv_login">
 
         <com.example.mystoryapp.customview.Email
-            android:id="@+id/main_et_email"
+            android:id="@+id/et_loginemail"
             style="@style/input.email" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/main_til_password"
+        android:id="@+id/til_loginpassword"
         style="@style/text_input_layout.password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_til_email">
+        app:layout_constraintTop_toBottomOf="@+id/til_loginemail">
 
         <com.example.mystoryapp.customview.Password
-            android:id="@+id/main_et_password"
+            android:id="@+id/et_loginpassword"
             style="@style/input.password"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/main_btn_login"
+        android:id="@+id/btn_login"
         style="@style/button"
         android:layout_width="match_parent"
         android:layout_marginStart="16dp"
@@ -77,10 +77,10 @@
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_til_password" />
+        app:layout_constraintTop_toBottomOf="@+id/til_loginpassword" />
 
     <TextView
-        android:id="@+id/main_tv_do_not_have_acc"
+        android:id="@+id/tv_noaccount"
         style="@style/text"
         android:layout_width="wrap_content"
         android:layout_marginTop="8dp"
@@ -88,13 +88,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_btn_login" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <ProgressBar
-        android:id="@+id/main_pb_progress_bar_login"
+        android:id="@+id/pb_loginprogressbar"
         style="@style/progress_bar.inline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_btn_login" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

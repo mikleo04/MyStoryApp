@@ -20,13 +20,13 @@ class DetailStoryActivity : AppCompatActivity() {
         val data = intent.getParcelableExtra<ListStoryItem>(USER_DETAIL_EXTRA)
         val storyText = data?.description.toString()
 
-        binding.detailTvUser.text = data?.name.toString()
+        binding.tvDetailusername.text = data?.name.toString()
         
-        binding.detailTvDetailStory.text = storyText
+        binding.tvDetailstory.text = storyText
 
         Glide.with(binding.root.context)
             .load(data?.photoUrl)
-            .into(binding.detailIvBanner)
+            .into(binding.ivDetailbanner)
 
 
     }

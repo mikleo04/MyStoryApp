@@ -42,18 +42,18 @@ class AddStoryActivity : AppCompatActivity() {
         
         user = UserPreference(this).getUser()
 
-        binding.addStoryBtnGallery.setOnClickListener{
+        binding.btnAddstorygalery.setOnClickListener{
             val intent = Intent()
             intent.action = Intent.ACTION_GET_CONTENT
             intent.type = "image/*"
             launcherIntentGallery.launch(Intent.createChooser(intent, "Choose a Picture"))
         }
 
-        binding.addStoryBtnUpload.setOnClickListener{
+        binding.btnAddstoryupload.setOnClickListener{
             if (photoFile == null){
                 Toast.makeText(this, "Photo is required", Toast.LENGTH_SHORT).show()
             }else{
-                addStoryModel.addNewStory(binding.addStoryEtNotes.text.toString(), 0.0, 0.0, photoFile!!, user.token.toString())
+                addStoryModel.addNewStory(binding.etAddstorynote.text.toString(), 0.0, 0.0, photoFile!!, user.token.toString())
             }
         }
 
@@ -64,7 +64,7 @@ class AddStoryActivity : AppCompatActivity() {
                 Toast.makeText(this, "Add story gagal", Toast.LENGTH_SHORT).show()
             }
         }
-        binding.addStoryBtnCamera.setOnClickListener {
+        binding.btnAddstorycamera.setOnClickListener {
             if (!allPermissionsGranted()) {
                 ActivityCompat.requestPermissions(
                     this,
@@ -97,7 +97,7 @@ class AddStoryActivity : AppCompatActivity() {
                 isBackCamera
             )
 
-            binding.addStoryIvPreview.setImageBitmap(result)
+            binding.ivAddstorypreview.setImageBitmap(result)
         }
     }
 
@@ -105,7 +105,7 @@ class AddStoryActivity : AppCompatActivity() {
         if (result.resultCode == RESULT_OK) {
             val selectedImg: Uri = result.data?.data as Uri
             photoFile = createTemporaryFile(selectedImg)
-            binding.addStoryIvPreview.setImageURI(selectedImg)
+            binding.ivAddstorypreview.setImageURI(selectedImg)
         }
     }
     private fun rotateBitmap(bitmap: Bitmap, isBackCamera: Boolean = false): Bitmap {

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/iv_pagetitle"
+            android:id="@+id/tv_detailpagetitle"
             style="@style/heading.heading6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,36 +22,56 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/detail_tv_user"
+            android:id="@+id/tv_name"
             style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="45dp"
-            android:text="@string/user"
+            android:text="Nama : "
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_pagetitle" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_detailpagetitle" />
+
+        <TextView
+            android:id="@+id/tv_detailusername"
+            style="@style/text"
+            android:layout_marginStart="5dp"
+            android:text="@string/user"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+            app:layout_constraintStart_toEndOf="@+id/tv_name"
+            app:layout_constraintTop_toTopOf="@+id/tv_name" />
 
         <ImageView
-            android:id="@+id/detail_iv_banner"
+            android:id="@+id/iv_detailbanner"
             android:layout_width="380dp"
             android:layout_height="250dp"
             android:layout_marginTop="70dp"
             android:contentDescription="@string/image_of_user_story"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/iv_pagetitle"
+            app:layout_constraintTop_toBottomOf="@id/tv_detailpagetitle"
             app:srcCompat="@drawable/images" />
 
         <TextView
-            android:id="@+id/detail_tv_detailStory"
+            android:id="@+id/tv_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="Note : "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_detailbanner" />
+
+        <TextView
+            android:id="@+id/tv_detailstory"
             style="@style/text"
             android:layout_width="match_parent"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:padding="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_iv_banner"
+            app:layout_constraintTop_toBottomOf="@+id/tv_note"
             tools:text="@string/lorem_ipsum" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/tv_addpagetittle"
             style="@style/heading.heading6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,43 +22,43 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/add_story_iv_preview"
+            android:id="@+id/iv_addstorypreview"
             android:layout_width="350dp"
             android:layout_height="240dp"
             android:layout_marginTop="30dp"
             android:contentDescription="@string/preview_of_selected_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_addpagetittle"
             app:srcCompat="@drawable/images" />
 
         <Button
-            android:id="@+id/add_story_btn_camera"
+            android:id="@+id/btn_addstorycamera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/camera"
-            app:layout_constraintEnd_toStartOf="@+id/add_story_btn_gallery"
+            app:layout_constraintEnd_toStartOf="@+id/btn_addstorygalery"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/add_story_iv_preview" />
+            app:layout_constraintTop_toBottomOf="@+id/iv_addstorypreview" />
 
         <Button
-            android:id="@+id/add_story_btn_gallery"
+            android:id="@+id/btn_addstorygalery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/gallery"
-            app:layout_constraintBottom_toBottomOf="@+id/add_story_btn_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_addstorycamera"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/add_story_btn_camera"
-            app:layout_constraintTop_toTopOf="@+id/add_story_btn_camera" />
+            app:layout_constraintStart_toEndOf="@+id/btn_addstorycamera"
+            app:layout_constraintTop_toTopOf="@+id/btn_addstorycamera" />
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/add_story_til_notes"
+            android:id="@+id/til_addstorynote"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="200dp"
@@ -69,10 +69,10 @@
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/add_story_btn_gallery">
+            app:layout_constraintTop_toBottomOf="@+id/btn_addstorygalery">
 
             <EditText
-                android:id="@+id/add_story_et_notes"
+                android:id="@+id/et_addstorynote"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:height="0dp"
@@ -85,7 +85,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/add_story_btn_upload"
+            android:id="@+id/btn_addstoryupload"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -95,7 +95,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/add_story_til_notes" />
+            app:layout_constraintTop_toBottomOf="@+id/til_addstorynote" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

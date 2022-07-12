@@ -35,8 +35,8 @@ class CameraxActivity : AppCompatActivity() {
 
         cameraExecutor = Executors.newSingleThreadExecutor()
 
-        binding.cameraIvCapture.setOnClickListener { takePhoto() }
-        binding.cameraIcSwitchCameraMode.setOnClickListener {
+        binding.ivCameracapture.setOnClickListener { takePhoto() }
+        binding.ivCameraswitchmode.setOnClickListener {
             cameraSelector = if (cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA) CameraSelector.DEFAULT_FRONT_CAMERA
             else CameraSelector.DEFAULT_BACK_CAMERA
             startCamera()
