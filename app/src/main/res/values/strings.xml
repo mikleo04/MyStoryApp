@@ -7,57 +7,61 @@
     <string name="characters">characters</string>
     <string name="email_is_not_valid">Email is not valid</string>
     <string name="password_must_more_than_x_characters">Password must more than 6 characters</string>
-    <string name="user">user</string>
+    <string name="username">user</string>
     <string name="default_password" translatable="false">1234567</string>
     <string name="at_gmail_dot_com" translatable="false">\@gmail.com</string>
     <string name="failed_to_take_image">Fails to take image</string>
     <string name="failed_to_start_camera">Fails to start camera</string>
-    <string name="camera">Camera</string>
-    <string name="gallery">Gallery</string>
+    <string name="choose_camera">Camera</string>
+    <string name="choose_gallery">Gallery</string>
     <string name="upload">Upload</string>
-    <string name="notes">Notes</string>
-    <string name="preview_of_selected_image">Preview of selected image</string>
-    <string name="lorem_ipsum" translatable="false">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
-    <string name="tell_your_story_here">Tell your story here</string>
-    <string name="take_picture">Take picture</string>
-    <string name="switch_camera_button">switch camera button</string>
+    <string name="notes">Write Your Notes</string>
+    <string name="preview_image">Preview image your selected</string>
+    <string name="content_of_story" translatable="false">Here your story.</string>
+    <string name="write_the_story">Write your story here</string>
+    <string name="take_the_picture">Take picture from camera</string>
+    <string name="switch_the_camera">switch camera to opposite direction</string>
     <string name="back_to_previous_page">Back to previous page</string>
-    <string name="image_of_user_story">image of user story</string>
+    <string name="image_about_story">image about story</string>
     <string name="date_created">Date created</string>
     <string name="back">Back</string>
     <string name="user_do_not_write_a_story">an image that defines user doesn\'t write a story</string>
     <string name="email" translatable="false">Email</string>
     <string name="password">Password</string>
     <string name="please_sign_in_to_continue">Please sign in to Continue</string>
-    <string name="login">Login</string>
-    <string name="do_not_have_an_account">Don\'t have an account?</string>
+    <string name="text_login">Login</string>
+    <string name="no_account">Don\'t have an account?</string>
     <string name="sign_up">Sign Up</string>
     <string name="login_banner">login banner</string>
     <string name="share_thought_flawlessly" translatable="false">Share Thought Flawlesly</string>
     <string name="this_is_on_boarding_image_to_welcome_new_user">this is onboarding image to welcome new user</string>
-    <string name="add_new_story">add new story</string>
+    <string name="new_story">new story</string>
     <string name="name">Name</string>
     <string name="your_name">your name</string>
-    <string name="create_account">Create Account</string>
-    <string name="register">Register</string>
-    <string name="already_have_an_account">Already have an account?</string>
+    <string name="title_create_account">Create Account</string>
+    <string name="regis">Register</string>
+    <string name="have_an_account">Already have an account?</string>
     <string name="sign_in">Sign in</string>
     <string name="got_it">Got It</string>
     <string name="create_account_success">Create Account Success</string>
+    <string name="title_page_login">Welcome to My Story App!</string>
     <string name="we_are_one_step_closer">We are one step closer</string>
     <string name="login_now_and_we_are_good_to_go">Login now and we are good to go!</string>
     <string name="image_shows_that_we_have_successfully_create_an_account">image shows that we have successfully create an account</string>
     <string name="title">Title</string>
     <string name="refresh">Refresh</string>
+    <string name="title_page_detail_story">View Your Detail Story Here !</string>
     <string name="log_out">Log out</string>
     <string name="story_note_app">Story note app</string>
     <string name="stories">Stories</string>
     <string name="updating">Updating</string>
+    <string name="name_of_user">Nama :</string>
     <string name="please_wait">Please wait</string>
     <string name="logout_question">Logout?</string>
     <string name="are_you_sure">Are you sure?</string>
     <string name="logout">Logout</string>
     <string name="cancel">Cancel</string>
+    <string name="register_banner">Register Banner</string>
     <string name="double_tap_to_exit">Double tap to exit</string>
     <string name="name_field_is_required">Name field is required</string>
     <string name="email_or_password_cannot_be_empty">Email or password cannot be empty</string>
@@ -65,4 +69,6 @@
     <string name="cannot_be_empty">Cannot be empty</string>
     <string name="registration_failed">Registration failed</string>
     <string name="no_data">No data</string>
+    <string name="add_story">Add Your Story Here !</string>
+    <string name="note">Note :</string>
 </resources>

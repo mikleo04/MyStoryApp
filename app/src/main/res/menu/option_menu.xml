@@ -5,12 +5,12 @@
     <group android:menuCategory="container">
     <item android:title="@string/refresh"
         android:id="@+id/option_menu_refresh"
-        android:icon="@drawable/ic_baseline_refresh_24"
+        android:icon="@drawable/ic_refresh"
         app:showAsAction="ifRoom"/>
         
     <item android:title="@string/log_out"
         android:id="@+id/option_menu_log_out"
-        android:icon="@drawable/ic_baseline_logout"
+        android:icon="@drawable/ic_logout"
         app:showAsAction="always"/>
     </group>
 

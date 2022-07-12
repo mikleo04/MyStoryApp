@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Welcome to My Story App!"
+        android:text="@string/title_page_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,14 +27,14 @@
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_titlelogin"
-        app:srcCompat="@drawable/login_page" />
+        app:srcCompat="@drawable/vector_login_page" />
 
 
     <TextView
         android:id="@+id/tv_login"
         style="@style/heading"
         android:layout_marginTop="24dp"
-        android:text="@string/login"
+        android:text="@string/text_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/login"
+        android:text="@string/text_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_loginpassword" />
@@ -84,7 +84,7 @@
         style="@style/text"
         android:layout_width="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/do_not_have_an_account"
+        android:text="@string/no_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"

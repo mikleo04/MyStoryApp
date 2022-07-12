@@ -47,13 +47,13 @@
 
     <style name="text_input_layout.password">
         <item name="android:hint">@string/password</item>
-        <item name="startIconDrawable">@drawable/ic_baseline_lock_24</item>
+        <item name="startIconDrawable">@drawable/ic_lock</item>
         <item name="passwordToggleEnabled">true</item>
 
     </style>
 
     <style name="text_input_layout.email">
-        <item name="startIconDrawable">@drawable/ic_baseline_email_24</item>
+        <item name="startIconDrawable">@drawable/ic_email</item>
         <item name="android:hint">@string/email</item>
     </style>
 
@@ -116,7 +116,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">24dp</item>
-        <item name="srcCompat">@drawable/ic_baseline_arrow_back_24</item>
+        <item name="srcCompat">@drawable/arrow_back</item>
         <item name="contentDescription">@string/back_to_previous_page</item>
         <item name="android:background">@null</item>
         <item name="layout_constraintHorizontal_bias">0.07</item>

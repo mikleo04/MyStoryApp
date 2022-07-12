@@ -19,12 +19,12 @@
             android:id="@+id/rv_rowimagebanner"
             android:layout_width="0dp"
             android:layout_height="150dp"
-            android:contentDescription="@string/image_of_user_story"
+            android:contentDescription="@string/image_about_story"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/images" />
+            app:srcCompat="@drawable/vector_images" />
 
         <TextView
             android:id="@+id/rv_rowname"

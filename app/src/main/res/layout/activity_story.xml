@@ -10,7 +10,7 @@
         android:id="@+id/fab_addstory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/add_new_story"
+        android:contentDescription="@string/new_story"
         android:clickable="true"
         android:focusable="true"
         android:layout_marginEnd="50dp"
