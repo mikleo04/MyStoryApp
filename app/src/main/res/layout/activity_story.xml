@@ -19,11 +19,6 @@
         android:focusable="true"
         android:contentDescription="@string/add_new_story" />
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/stories_swipeRefreshContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/stories_rv_story_list"
             android:layout_width="0dp"
@@ -32,10 +27,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <ProgressBar
         android:id="@+id/stories_progress_bar"
@@ -47,16 +38,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/stories_no_data"
-        style="@style/heading"
-        android:text="@string/no_data"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/stories_swipeRefreshContainer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/stories_swipeRefreshContainer"
-        app:layout_constraintTop_toTopOf="@+id/stories_swipeRefreshContainer"
-        app:layout_constraintVertical_bias="0.57" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

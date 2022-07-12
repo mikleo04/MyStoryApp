@@ -31,7 +31,15 @@ class Email: AppCompatEditText, View.OnTouchListener {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                errorHandler()
+                if (text.isNullOrEmpty()){
+                    (this@Email.parent.parent as TextInputLayout).error = context.getString(R.string.cannot_be_empty)
+                }else{
+                    if (text?.length!! > 0 && !Matcher.emailValid(text.toString())){
+                        (this@Email.parent.parent as TextInputLayout).error = context.getString(R.string.email_is_not_valid)
+                    }else {
+                        (this@Email.parent.parent as TextInputLayout).error = null
+                    }
+                }
             }
 
             override fun afterTextChanged(p0: Editable?) {
@@ -42,21 +50,16 @@ class Email: AppCompatEditText, View.OnTouchListener {
     }
 
     override fun onTouch(p0: View?, p1: MotionEvent?): Boolean {
-        errorHandler()
-        return false
-    }
-
-    private fun errorHandler() {
-        val textInputLayout = this.parent.parent as TextInputLayout
         if (text.isNullOrEmpty()){
-            textInputLayout.error = context.getString(R.string.cannot_be_empty)
+            (this@Email.parent.parent as TextInputLayout).error = context.getString(R.string.cannot_be_empty)
         }else{
             if (text?.length!! > 0 && !Matcher.emailValid(text.toString())){
-                textInputLayout.error = context.getString(R.string.email_is_not_valid)
+                (this@Email.parent.parent as TextInputLayout).error = context.getString(R.string.email_is_not_valid)
             }else {
-                textInputLayout.error = null
+                (this@Email.parent.parent as TextInputLayout).error = null
             }
         }
+        return false
     }
 
 }
