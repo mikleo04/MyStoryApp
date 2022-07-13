@@ -16,6 +16,7 @@ class StoryAdapter(private val storyList: ArrayList<ListStoryItem>): RecyclerVie
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         holder.binding.rvRowname.text = storyList[position].name
+        holder.binding.rvRowdate.text = storyList[position].createdAt.toString().substring(0,10)
 
         Glide.with(holder.binding.root.context)
             .load(storyList[position].photoUrl)

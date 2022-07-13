@@ -36,7 +36,6 @@ class StoryActivity : AppCompatActivity() {
         listStoryAdapter = StoryAdapter(storyList)
 
         supportActionBar?.title = getString(R.string.app_name)
-        supportActionBar?.subtitle = getString(R.string.story_note_app)
 
         binding.fabAddstory.setOnClickListener{
             startActivity(Intent(this, AddStoryActivity::class.java))

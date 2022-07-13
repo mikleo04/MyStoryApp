@@ -50,9 +50,8 @@
     <string name="image_shows_that_we_have_successfully_create_an_account">image shows that we have successfully create an account</string>
     <string name="title">Title</string>
     <string name="refresh">Refresh</string>
-    <string name="title_page_detail_story">View Your Detail Story Here !</string>
+    <string name="title_page_detail_story">View The Detail Story Here !</string>
     <string name="log_out">Log out</string>
-    <string name="story_note_app">Story note app</string>
     <string name="stories">Stories</string>
     <string name="updating">Updating</string>
     <string name="name_of_user">Nama :</string>

@@ -15,6 +15,17 @@
         android:background="?android:selectableItemBackground"
         android:padding="25dp">
 
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="#171616"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_rowimagebanner" />
+
         <ImageView
             android:id="@+id/rv_rowimagebanner"
             android:layout_width="0dp"
@@ -30,12 +41,20 @@
             android:id="@+id/rv_rowname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="@+id/rv_rowimagebanner"
-            app:layout_constraintTop_toBottomOf="@+id/rv_rowimagebanner"
+            app:layout_constraintTop_toBottomOf="@+id/view"
             tools:text="Name" />
+        <TextView
+            android:id="@+id/rv_rowdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/rv_rowname"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="2022-04-11" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
