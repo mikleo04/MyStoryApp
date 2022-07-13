@@ -30,7 +30,7 @@
     <string name="password">Password</string>
     <string name="please_sign_in_to_continue">Please sign in to Continue</string>
     <string name="text_login">Login</string>
-    <string name="no_account">Don\'t have an account?</string>
+    <string name="no_account">Don\'t have an account? Create here</string>
     <string name="sign_up">Sign Up</string>
     <string name="login_banner">login banner</string>
     <string name="share_thought_flawlessly" translatable="false">Share Thought Flawlesly</string>
@@ -40,7 +40,7 @@
     <string name="your_name">your name</string>
     <string name="title_create_account">Create Account</string>
     <string name="register">Register</string>
-    <string name="have_an_account">Already have an account?</string>
+    <string name="have_an_account">Do you have an account?</string>
     <string name="sign_in">Sign in</string>
     <string name="got_it">Got It</string>
     <string name="create_account_success">Create Account Success</string>

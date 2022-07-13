@@ -9,13 +9,15 @@
         <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/drawable-v24/ic_loving_it_re_jfh4.xml" value="0.1655" />
         <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/drawable-v24/on_boarding_img_1.xml" value="0.1655" />
         <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/drawable-v24/outline.xml" value="0.1855" />
+        <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/drawable/bg_button_rounded.xml" value="0.1855" />
+        <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/drawable/bg_button_rounded_stroke.xml" value="0.1855" />
         <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1855" />
         <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/drawable/images.xml" value="0.1855" />
         <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/drawable/login_start.xml" value="0.1855" />
-        <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/layout/activity_add_story.xml" value="0.22" />
+        <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/layout/activity_add_story.xml" value="0.25" />
         <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/layout/activity_camerax.xml" value="0.1" />
         <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/layout/activity_detail_story.xml" value="0.25" />
-        <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/layout/activity_on_boarding.xml" value="0.16983695652173914" />
         <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/layout/activity_register.xml" value="0.16983695652173914" />
         <entry key="..\:/Users/NRT~Mikleo/AndroidStudioProjects/MyStoryApp/app/src/main/res/layout/activity_story.xml" value="0.1" />

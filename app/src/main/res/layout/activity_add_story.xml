@@ -43,27 +43,26 @@
 
         <Button
             android:id="@+id/btn_addstorycamera"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:background="@drawable/bg_button_rounded"
             android:text="@string/choose_camera"
-            app:layout_constraintEnd_toStartOf="@+id/btn_addstorygalery"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_addstorypreview" />
 
         <Button
             android:id="@+id/btn_addstorygalery"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_button_rounded"
             android:text="@string/choose_gallery"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_addstorycamera"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/btn_addstorycamera"
-            app:layout_constraintTop_toTopOf="@+id/btn_addstorycamera" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_addstorycamera" />
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -100,6 +99,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_button_rounded"
             android:text="@string/upload"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
