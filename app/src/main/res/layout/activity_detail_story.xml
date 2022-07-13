@@ -12,9 +12,10 @@
 
         <TextView
             android:id="@+id/tv_detailpagetitle"
-            style="@style/heading.heading6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
             android:layout_marginTop="24dp"
             android:text="@string/title_page_detail_story"
             app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +24,6 @@
 
         <TextView
             android:id="@+id/tv_name"
-            style="@style/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -34,7 +34,8 @@
 
         <TextView
             android:id="@+id/tv_detailusername"
-            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:text="@string/username"
             app:layout_constraintBottom_toBottomOf="@+id/tv_name"
@@ -64,8 +65,8 @@
 
         <TextView
             android:id="@+id/tv_detailstory"
-            style="@style/text"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:padding="16dp"

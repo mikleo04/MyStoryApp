@@ -39,7 +39,7 @@
     <string name="name">Name</string>
     <string name="your_name">your name</string>
     <string name="title_create_account">Create Account</string>
-    <string name="regis">Register</string>
+    <string name="register">Register</string>
     <string name="have_an_account">Already have an account?</string>
     <string name="sign_in">Sign in</string>
     <string name="got_it">Got It</string>
@@ -71,4 +71,5 @@
     <string name="no_data">No data</string>
     <string name="add_story">Add Your Story Here !</string>
     <string name="note">Note :</string>
+    <string name="please_login">Please Login !</string>
 </resources>
